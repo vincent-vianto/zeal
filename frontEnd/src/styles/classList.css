@@ -1,0 +1,145 @@
+#pageHeaderTitle {
+    margin: 2rem 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.classCard {
+    flex-wrap: wrap;
+    display: flex;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+    border-radius: 10px;
+    margin: 0 0 2rem 0;
+    overflow: hidden;
+    position: relative;
+    background-color: #ebeaf0;
+}
+
+.classCard h1,
+.classCard .h1 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.classCard .small {
+    font-size: 80%;
+}
+
+.classCard .classCard-title {
+    font-size: 1.75rem;
+    text-transform: capitalize;
+}
+
+.classCard .classCard-img {
+    max-height: 180px;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.classCard .classCard-bar {
+    width: 50px;
+    height: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #5049ed;
+    transition: width 0.2s ease;
+}
+
+.classCard .classCard-text {
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.classCard .classCard-preview-txt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    height: 100%;
+}
+
+.classCard .classCard-tagbox {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 14px;
+    margin: 20px 0 0 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.classCard .classCard-buttonbox {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 14px;
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+
+
+.classCard .classCard-tagbox .tag-item {
+    display: inline-block;
+    background: #5049ed;
+    border-radius: 3px;
+    padding: 2.5px 10px;
+    margin: 0 5px 5px 0;
+    cursor: default;
+    user-select: none;
+    color: #ffff;
+    transition: background-color 0.3s;
+}
+
+.classCard .classCard-tagbox .tag-item:hover {
+    background: rgba(83, 83, 83, 0.8);
+}
+
+.classCard:hover .classCard-bar {
+    width: 100px;
+}
+
+@media screen and (min-width: 769px) {
+    .classCard {
+        flex-wrap: inherit;
+    }
+
+    .classCard .classCard-title {
+        font-size: 2rem;
+    }
+
+    .classCard .classCard-tagbox {
+        justify-content: start;
+    }
+
+    .classCard .classCard-img {
+        max-width: 300px;
+        max-height: 100%;
+        transition: transform 0.3s ease;
+    }
+
+    .classCard .classCard-text {
+        padding: 3rem;
+        width: 100%;
+    }
+
+    .classCard:hover .classCard-img {
+        transform: scale(1.1);
+    }
+
+    .classCard:nth-child(2n+1) {
+        flex-direction: row;
+    }
+
+    .classCard:nth-child(2n+0) {
+        flex-direction: row-reverse;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .classCard-text {
+        padding: 2rem 3.5rem;
+    }
+
+}
